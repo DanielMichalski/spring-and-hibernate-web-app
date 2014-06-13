@@ -3,11 +3,12 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-    <title>Spring 3 hibernate integration example</title>
+    <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
+    <title>Lista pracownikow</title>
 </head>
 <body>
  
-<h2>Employee Management Screen : Spring 3 hibernate integration</h2>
+<h2>Lista pracownikow</h2>
  
 <form:form method="post" action="add" commandName="employee">
  
@@ -48,10 +49,10 @@
 </tr>
 <c:forEach items="${employeeList}" var="emp">
     <tr>
-        <td>${emp.lastname}, ${emp.firstname} </td>
+        <td>${emp.firstname} ${emp.lastname} </td>
         <td>${emp.email}</td>
         <td>${emp.telephone}</td>
-        <td><a href="delete/${emp.id}">delete</a></td>
+        <td><a href="delete/${emp.id}">Usun</a></td>
     </tr>
 </c:forEach>
 </table>

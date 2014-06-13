@@ -3,24 +3,24 @@ package com.springandhibernate.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "EMPLOYEE")
+@Table(name = "employee")
 public class EmployeeEntity {
 
     @Id
-    @Column(name = "ID")
-    @GeneratedValue
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "FIRSTNAME")
+    @Column(name = "first_name")
     private String firstname;
 
-    @Column(name = "LASTNAME")
+    @Column(name = "last_name")
     private String lastname;
 
-    @Column(name = "EMAIL")
+    @Column(name = "email")
     private String email;
 
-    @Column(name = "TELEPHONE")
+    @Column(name = "telephone")
     private String telephone;
 
 
