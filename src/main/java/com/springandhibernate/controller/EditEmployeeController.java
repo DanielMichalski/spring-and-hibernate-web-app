@@ -1,7 +1,7 @@
 package com.springandhibernate.controller;
 
 import com.springandhibernate.entity.EmployeeEntity;
-import com.springandhibernate.service.EmployeeManager;
+import com.springandhibernate.service.IEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class EditEmployeeController {
 
     @Autowired
-    private EmployeeManager employeeManager;
+    private IEmployeeService employeeManager;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String listEmployees(ModelMap map) {
@@ -37,7 +37,7 @@ public class EditEmployeeController {
         return "redirect:/";
     }
 
-    public void setEmployeeManager(EmployeeManager employeeManager) {
+    public void setEmployeeManager(IEmployeeService employeeManager) {
         this.employeeManager = employeeManager;
     }
 }

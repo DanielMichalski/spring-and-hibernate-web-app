@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class EmployeeDaoImpl implements EmployeeDAO {
+public class EmployeeDao2 implements IEmployeeDao {
 
     @Autowired
     private SessionFactory sessionFactory;
