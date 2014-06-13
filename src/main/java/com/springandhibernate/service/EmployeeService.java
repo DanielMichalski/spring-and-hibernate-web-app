@@ -1,6 +1,6 @@
 package com.springandhibernate.service;
 
-import com.springandhibernate.dao.EmployeeDAO;
+import com.springandhibernate.dao.IEmployeeDao;
 import com.springandhibernate.entity.EmployeeEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,10 +9,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class EmployeeManagerImpl implements EmployeeManager {
+public class EmployeeService implements IEmployeeService {
 
     @Autowired
-    private EmployeeDAO employeeDAO;
+    private IEmployeeDao employeeDAO;
 
     @Override
     @Transactional
@@ -32,7 +32,7 @@ public class EmployeeManagerImpl implements EmployeeManager {
         employeeDAO.deleteEmployee(employeeId);
     }
 
-    public void setEmployeeDAO(EmployeeDAO employeeDAO) {
+    public void setEmployeeDAO(IEmployeeDao employeeDAO) {
         this.employeeDAO = employeeDAO;
     }
 }
